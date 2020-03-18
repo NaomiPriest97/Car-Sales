@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 
 
 const AdditionalFeatures = props => {
+  console.log("props",props);
   return (
     <div className="content">
       <h4>Additional Features</h4>
       {props.additionalFeatures.length ? (
         <ol type="1">
           {props.additionalFeatures.map(item => (
-            <AdditionalFeature key={item.id} feature={item} />
+            <AdditionalFeature key={item.id} feature={item} addFeatures={props.addFeatures} />
           ))}
         </ol>
       ) : (

@@ -29,7 +29,8 @@ const initialState = {
           car: {
             ...state.car,
             features: [...state.car.features, action.payload]
-          }
+          },
+          additionalPrice: state.additionalPrice + action.payload.price
         };
       default:
         return state;
